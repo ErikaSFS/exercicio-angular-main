@@ -1,0 +1,14 @@
+{
+  "name": "exercicio-angular-main",
+  "version": "1.0.0",
+  "description": "Pequeno estudo de caso de Angular para interfaces ricas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.6"
+  }
+}
