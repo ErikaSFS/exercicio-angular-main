@@ -7,6 +7,11 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+login() {
+throw new Error('Method not implemented.');
+}
+nome: any;
+senha: any;
 
   constructor(
     private router: Router,
