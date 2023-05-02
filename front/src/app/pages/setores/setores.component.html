@@ -17,3 +17,18 @@
     </tr>
   </ng-template>
 </p-table>
+
+
+<h2 mat-dialog-title>Criar/Setor</h2>
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <input matInput placeholder="Nome do setor" formControlName="nome">
+      <mat-error *ngIf="form.controls['nome'].invalid">O nome do setor é obrigatório.</mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-button color="primary" (click)="salvar()">Salvar</button>
+</div>
