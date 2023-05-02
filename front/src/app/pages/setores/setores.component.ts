@@ -1,7 +1,10 @@
-import {Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {Router} from '@angular/router';
 import {Setor} from "../../shared/models";
 import {ApiService} from "../../shared/api.service";
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-setores',
@@ -11,10 +14,14 @@ import {ApiService} from "../../shared/api.service";
 export class SetoresComponent {
 
   setores: Setor[] = []
+  form: FormGroup;
 
+  
   constructor(
     private router: Router,
-    private api: ApiService
+    private api: ApiService,
+    private formBuilder: FormBuilder,
+    public dialogRef: MatDialogRef<SetoresDialogComponent>,
   ) {
   }
 

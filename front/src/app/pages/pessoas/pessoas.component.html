@@ -17,3 +17,28 @@
     </tr>
   </ng-template>
 </p-table>
+
+
+
+<h2 mat-dialog-title>{{ data.action === 'create' ? 'Criar' : 'Editar' }} Pessoas</h2>
+<div mat-dialog-content>
+  <form [formGroup]="personForm">
+    <mat-form-field>
+      <input matInput formControlName="nome" placeholder="Nome">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancelar</button>
+  <button mat-button color="primary" (click)="onSaveClick()">{{ data.ayction === 'create' ? 'Criar' : 'Salvar' }}</button>
+</div>
+
+
+<ng-container matColumnDef="actions">
+  <th mat-header-cell *matHeaderCellDef> Ações </th>
+  <td mat-cell *matCellDef="let person">
+    <button mat-icon-button (click)="onDeleteClick(person)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </td>
+</ng-container>
